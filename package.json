@@ -14,7 +14,8 @@
   },
   "scripts": {
     "predeploy": "react-scripts build",
-    "deploy": "ssh git@casper 'rm -rfv /var/www/IVR/*' && scp -r build/* git@casper:/var/www/IVR/",
+    "deploy_cas": "react-scripts build&& ssh git@casper 'rm -rfv /var/www/IVR/*' && scp -r build/* git@casper:/var/www/IVR/",
+    "deploy_gh": "react-scripts build&& gh-pages -d build", 
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
