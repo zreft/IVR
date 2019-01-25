@@ -1,0 +1,35 @@
+{
+  "name": "itsm",
+  "description": "IT Service Management",
+  "author": "Yury Savin <https://github.com/baitun>",
+  "homepage": "http://casper/IVR",
+  "main": "src/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "antd": "^3.10.4",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.1"
+  },
+  "scripts": {
+    "predeploy": "react-scripts build",
+    "deploy": "ssh git@casper 'rm -rfv /var/www/IVR/*' && scp -r build/* git@casper:/var/www/IVR/",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
